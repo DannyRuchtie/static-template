@@ -1,0 +1,146 @@
+/* @import "/css/dbasic-min.css"; */
+
+body {
+  background: #f33d6a;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+section {
+  min-width: 640px;
+  min-height: 640px;
+  display: grid;
+  grid-template-columns: 1fr 20rem 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". logo . "
+    ". form . "
+    ". . . ";
+}
+
+#logo {
+  grid-area: logo;
+  place-self: end center;
+
+  display: block;
+}
+
+form {
+  grid-area: form;
+  place-self: center;
+  justify-items: center;
+  line-height: 4rem;
+}
+
+form inpute::before {
+  content: "#";
+}
+
+#hexcolor {
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 2.5rem;
+  border: 2px solid;
+  border-color: #ffffff;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  float: left;
+}
+
+#submit {
+  font-size: 1.5em;
+  line-height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: none;
+  color: #f33d6a;
+  float: left;
+  text-align: center;
+  background: #fff;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border: 2px solid #fff;
+}
+
+/* input#submit:invalid + #form {
+  border: 10px solid #fff;
+} */
+
+svg {
+  fill: currentColor;
+  display: block;
+}
+
+input[type="text"] {
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: 7rem;
+  padding: 0;
+  background: #fff;
+  border: 2px solid White;
+}
+
+input[type="color"] {
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0;
+  padding: 0;
+  border: 2px solid #fff;
+  background: transparent;
+  border-left: none;
+  float: left;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 2px solid #fff;
+  border-left: none;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+input[type="color"]::after {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  content: " ";
+  text-align: center;
+  background: url("cp_empty.svg") no-repeat center center;
+  background-size: 1rem;
+  display: block;
+  margin: -2.5rem 0 0 0;
+  padding: 0;
+}
+
+input[type="color"].dark::after {
+  background: url("cp_full_black.svg") no-repeat center center;
+  background-size: 1rem;
+}
+
+input[type="color"].white::after {
+  background: url("cp_full_white.svg") no-repeat center center;
+  background-size: 1rem;
+}
